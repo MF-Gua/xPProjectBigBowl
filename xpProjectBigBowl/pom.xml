@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dk.ek</groupId>
-    <artifactId>xpAdventureProject</artifactId>
+    <artifactId>xpProjectBigBowl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>xpAdventureProject</name>
     <description>xpAdventureProject</description>
