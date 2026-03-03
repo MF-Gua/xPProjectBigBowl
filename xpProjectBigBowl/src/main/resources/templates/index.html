@@ -11,6 +11,7 @@
             --frame-background-color: #c2d3db;
             --border-color: #000000;
             --button-background-color: #b1b9bb;
+            --card-background-color: #b1b9cc;
         }
 
         body {
@@ -22,7 +23,6 @@
             background-size: cover;
             background-position: 70% 37%;
             background-repeat: no-repeat;
-
 
 
         }
@@ -80,10 +80,20 @@
 
         .datetimeline {
             font-size: 1rem;
+            text-align: left;
         }
 
         .typeline {
             font-size: 0.8rem;
+            text-align: left;
+
+        }
+
+        .reservation-card {
+            display: block;
+            background: var(--card-background-color);
+            margin: 0.5em;
+            padding: 0.2em;
 
         }
 
@@ -112,7 +122,6 @@
 <body>
 
 
-
 <div class="frame">
 
     <div class="header">
@@ -126,33 +135,19 @@
 
             <div class="list-scroll-container">
 
-<!--                 th:each="reservation : ${reservations}">-->
-<!--                <p class="datetimeline" th:text="${reservation.date}, ${reservation.time}"></p>-->
-<!--                <p class="typeline" th:text="${reservation.type}, ${reservation.banenr}"></p>-->
+                <div th:each="reservation : ${reservations}">
 
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
-                <p>Reservation placeholder</p>
+                    <div class="reservation-card">
+                        <p class="datetimeline"
+                           th:text="${reservation.date + ' - ' + reservation.time + ' - ' + reservation.name}">
+                        </p>
 
+                        <p class="typeline"
+                           th:text="${reservation.type + '  -  Baner: ' + reservation.lanes}">
+                        </p>
+                    </div>
 
+                </div>
             </div>
         </main>
 
