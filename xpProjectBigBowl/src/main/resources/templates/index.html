@@ -152,10 +152,18 @@
         </main>
 
         <nav class="sidebar">
-            <button>Book bane</button>
-            <button>Book bord</button>
-            <button>Drift</button>
-            <button>Driftsliste</button>
+            <a th:href="@{/lanes}">
+                <button>Book bane</button>
+            </a>
+            <a th:href="@{/}">
+                <button>Book bord</button>
+            </a>
+            <a th:href="@{/}">
+                <button>Drift</button>
+            </a>
+            <a th:href="@{/}">
+                <button>Driftsliste</button>
+            </a>
         </nav>
 
     </div>
